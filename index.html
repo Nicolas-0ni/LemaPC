@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LemaPC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#" onclick="inicio()">LemaPC</a>
+        <div>
+            <a class="nav-link d-inline text-white me-3" href="#" onclick="inicio()">Inicio</a>
+            <a class="nav-link d-inline text-white me-3" href="#componentes">Componentes</a>
+            <a class="nav-link d-inline text-white" href="https://maps.app.goo.gl/GcXMp1jEaeDTwMwr9?g_st=iw" target="_blank">Ubicación</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<section id="inicio" class="container py-5">
+    <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap">
+        <img src="https://th.bing.com/th/id/OIP.CWU9pv_j3_Zsyeek0p8kegHaHa?w=176&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+            width="300" class="rounded shadow" alt="LemaPC">
+
+        <div class="text-center">
+            <h1 class="display-3 fw-bold">LemaPC</h1>
+            <p>Componentes de máxima potencia para el mejor gaming.</p>
+            <button class="btn btn-primary" onclick="mostrarComponentes()">Ver componentes</button>
+        </div>
+    </div>
+</section>
+
+<section id="componentes" class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Componentes</h2>
+        <p>Elegí una categoría.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Procesadores')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Procesadores</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Placa de Video')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Placa de Video</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Motherboard')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Motherboard</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Memorias RAM')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Memorias RAM</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Almacenamientos')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Almacenamientos</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Refrigeraciones')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Refrigeraciones</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Fuente de Alimentación')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fuente de Alimentación</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100" onclick="catalogo('Gabinete')">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Gabinete</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="catalogo" class="container py-5 d-none">
+    <button class="btn btn-secondary mb-4" onclick="inicio()">← Volver</button>
+    <h2 id="titulo" class="text-center fw-bold mb-5"></h2>
+    <div id="productos"></div>
+</section>
+
+<section id="contacto" class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+            <h2 class="text-center mb-4">Agendar una cita</h2>
+
+            <form>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresá tu nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" class="form-control" placeholder="Ingresá tu correo" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ingresá tu teléfono">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="Escribí tu consulta" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-naranja w-100">Enviar solicitud</button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">Nicolas Mingolla | 2026 | 4to año</p>
+</footer>
+
+<script>
+
+function catalogo(tipo) {
+
+    document.getElementById("inicio").classList.add("d-none");
+    document.getElementById("componentes").classList.add("d-none");
+    document.getElementById("contacto").classList.add("d-none");
+    document.getElementById("catalogo").classList.remove("d-none");
+
+    document.getElementById("titulo").textContent = tipo;
+
+    let html = "";
+
+    if (tipo == "Procesadores") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://m.media-amazon.com/images/I/71BSRcxVA0L._AC_.jpg" class="card-img-top" alt="Procesador AMD">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesador AMD Ryzen 5 5500</h5>
+                        <p class="card-text">8 núcleos, 16 hilos</p>
+                        <p class="card-text">Socket AM4</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://i5.walmartimages.com/asr/34e5698f-7059-4e0e-ad05-153760fe21a3.cd5b8f0e2405b7295eba7a3d88c15e65.jpeg" class="card-img-top" alt="Procesador AMD">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesador AMD Ryzen 5 4600G</h5>
+                        <p class="card-text">6 núcleos, 12 hilos</p>
+                        <p class="card-text">Socket AM4</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://m.media-amazon.com/images/I/61x2NkFzm9L.jpg" class="card-img-top" alt="Procesador AMD">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesador AMD 5 8400F</h5>
+                        <p class="card-text">6 núcleos, 12 hilos</p>
+                        <p class="card-text">Socket AM5</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://m.media-amazon.com/images/I/61dukbEGziL._AC_.jpg" class="card-img-top" alt="Procesador AMD">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesador AMD Ryzen 9 7900x3D</h5>
+                        <p class="card-text">16 núcleos, 32 hilos</p>
+                        <p class="card-text">Socket AM5</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Placa de Video") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://images.kabum.com.br/produtos/fotos/475647/placa-de-video-rx-7600-gaming-oc-8g-radeon-gigabyte-8gb-gddr6-128bits-rgb-gv-r76gaming-oc-8gd_1698435450_original.jpg" class="card-img-top" alt="Placa AMD">
+                    <div class="card-body">
+                        <h5 class="card-title">Placa de Video AMD RX 7600</h5>
+                        <p class="card-text">8GB de Vram GDDR6</p>
+                        <p class="card-text">Gigabyte</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://asset.msi.com/resize/image/global/product/product_1737516023f895424b0d960e1866828dbda06123ef.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" class="card-img-top" alt="Placa de Video Geforce">
+                    <div class="card-body">
+                        <h5 class="card-title">Placa de Video Geforce RTX 5090</h5>
+                        <p class="card-text">32GB de Vram GDDR7</p>
+                        <p class="card-text">MSI SUPRIM</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://www.sistemsoft.com.ar/wp-content/uploads/2025/08/placa-de-video-8gb-rtx-5060-ti-gigabyte-gaming-oc-600x600.jpg" class="card-img-top" alt="Placa de Video Gigabyte">
+                    <div class="card-body">
+                        <h5 class="card-title">Placa de Video RTX 5060 Ti</h5>
+                        <p class="card-text">8GB de Vram GDDR6</p>
+                        <p class="card-text">Gigabyte Gaming OC</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://cdn.beahero.gg/2026/03/MSI-RTX-5070-Ti-FRIEREN.jpg" class="card-img-top" alt="Placa de Video MSI">
+                    <div class="card-body">
+                        <h5 class="card-title">Placa de Video RTX 5070 Ti</h5>
+                        <p class="card-text">16GB de Vram GDDR7</p>
+                        <p class="card-text">MSI FRIEREN</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Motherboard") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRSx-pKHEF7fKkizuDDH1DzRC29bQPFXGnGISjY8_grGxpDmA3wrITEfQFlyA1nYXvMbaSVVpsdIEq68PzoOWooJCTSlewEIkNV4hh2v4ghaTZIntEdyjqiUUY" class="card-img-top" alt="Motherboard ">
+                    <div class="card-body">
+                        <h5 class="card-title">B550-A PRO(AM4)</h5>
+                        <p class="card-text">4 slots de RAM DDR4</p>
+                        <p class="card-text">2× USB 3.2 Gen 1, 2× USB 2.0, 1× USB 3.2 Gen 2 Type-A, 1× USB 3.2 Gen 2 Type-C, HDMI, DisplayPort, RJ-45, 5× audio jack, PS/2</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/5D031BFD-26B9-4953-9038-F608F1F00865" class="card-img-top" alt="Motherboard">
+                    <div class="card-body">
+                        <h5 class="card-title">ROG Crosshair VIII Dark Hero(AM4)</h5>
+                        <p class="card-text">4 slots de RAM DDR4</p>
+                        <p class="card-text">(1 Tipo C y 11 Tipo A), 2 conectores de red RJ-45 (2.5G y 1G), conectores de antena Wi-Fi, 5 jacks de audio analógico de 3.5 mm, 1 salida óptica S/PDIF y botones Clear CMOS y BIOS FlashBack</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://try.com.ar/wp-content/uploads/2026/03/mother-msi-b650-gaming-plus-wifi-ddr5-am5.webp" class="card-img-top" alt="Motherboard ">
+                    <div class="card-body">
+                        <h5 class="card-title">B650 Gaming Plus WiFi (AM5)</h5>
+                        <p class="card-text">4 Slots de RAM DDR5</p>
+                        <p class="card-text">(1 Tipo C de 20Gbps y 7 Tipo A), 1 puerto HDMI 2.1, 1 puerto DisplayPort 1.4, 1 conector LAN 2.5G, conectores de antena Wi-Fi, 5 jacks de audio de 3.5 mm y un botón Flash BIOS</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tRCjgNg0eha_S3vj2_r7iho1ATnvPbytPko50V7EXxtSLNza2Xld25Fp&s=10" class="card-img-top" alt="Motherboard">
+                    <div class="card-body">
+                        <h5 class="card-title">Gigabyte X670E AORUS Master (AM5)</h5>
+                        <p class="card-text">4 Slots de RAM DDR5</p>
+                        <p class="card-text">(2 Tipo C —uno con salida DisplayPort— y 10 Tipo A), 1 puerto HDMI 2.1, 1 puerto DisplayPort 1.4, 1 conector LAN 2.5G, conectores de antena Wi-Fi, 2 jacks de audio de 3.5 mm, 1 salida óptica S/PDIF y botones Clear CMOS y Q-Flash Plus</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Memorias RAM") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://hexus.net/media/uploaded/2019/8/27bf0e3c-fd7d-4917-9ebe-9560a6c673de.jpg" class="card-img-top" alt="Memoria RAM ">
+                    <div class="card-body">
+                        <h5 class="card-title">Memoria RAM g skill trident z neo royal DDR4</h5>
+                        <p class="card-text">Velocidad de 3600 MHz por RAM</p>
+                        <p class="card-text">Capacidad de 32 GB en dual channel</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://spacegamer.com.ar/img/Public/1058-producto-1-1167.jpg" class="card-img-top" alt="Memoria RAM ">
+                    <div class="card-body">
+                        <h5 class="card-title">Memoria RAM Corsair Dominator Platinum RGB DDR4</h5>
+                        <p class="card-text">Velocidad de 3200 MHz por RAM</p>
+                        <p class="card-text">Capacidad de 16 GB en dual channel</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuAEvg_-WD2Ef-O2y33FuaD0JITI5DTlo54C-6lXo2CwcpSlEjGmNgKxY&s=10" class="card-img-top" alt="Memoria RAM ">
+                    <div class="card-body">
+                        <h5 class="card-title">Memoria RAM G.Skill Trident Z5 RGB DDR5</h5>
+                        <p class="card-text">Velocidad de 8000 MHz por RAM</p>
+                        <p class="card-text">Capacidad de 32 GB en dual channel</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://media.ldlc.com/r1600/ld/products/00/06/06/85/LD0006068500.jpg" class="card-img-top" alt="Memoria RAM ">
+                    <div class="card-body">
+                        <h5 class="card-title">Memoria RAM Corsair Dominator Titanium DDR5</h5>
+                        <p class="card-text">Velocidad de 7200 MHz por RAM</p>
+                        <p class="card-text">Capacidad de 64 GB en dual channel</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Almacenamientos") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_776472-CBT92285621554_092025-O.webp" class="card-img-top" alt="Almacenamiento ">
+                    <div class="card-body">
+                        <h5 class="card-title">Almacenamiento Samsung 9100 PRO </h5>
+                        <p class="card-text">Interfaz PCIe 5.0 x4</p>
+                        <p class="card-text">Disponible en 4 TB alcanzando hasta 14.800 MB/s de lectura secuencial y 13.400 MB/s de escritura secuencial</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_627743-MLU78005019458_082024-O.webp" class="card-img-top" alt="Almacenamiento ">
+                    <div class="card-body">
+                        <h5 class="card-title">Almacenamiento WD Black SN850X</h5>
+                        <p class="card-text">Interfaz PCIe 4.0 x4</p>
+                        <p class="card-text">Disponible en 2 TB alcanzando hasta 7.300 MB/s de lectura secuencial y 6.600 MB/s de escritura secuencial </p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://aypcomputacion.com/wp-content/uploads/2022/11/crucial_p3_plus_m.2_nvme.jpg" class="card-img-top" alt="Almacenamiento ">
+                    <div class="card-body">
+                        <h5 class="card-title">Almacenamiento Crucial P3 Plus</h5>
+                        <p class="card-text">: Interfaz PCIe 4.0 x4 con memoria NAND 3D QLC</p>
+                        <p class="card-text">Disponible en 1 TB alcanzando hasta 5.000 MB/s de lectura secuencial y 4.200 MB/s de escritura secuencial</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://images.fravega.com/f300/5c121af80f6a3e5350aee38f473cf791.jpg.webp" class="card-img-top" alt="Almacenamiento ">
+                    <div class="card-body">
+                        <h5 class="card-title">Almacenamiento Kingston NV2</h5>
+                        <p class="card-text">Interfaz PCIe 4.0 x4 de gama de entrada</p>
+                        <p class="card-text">Disponible en 500 GB alcanzando hasta 3.500 MB/s de lectura secuencial y 2.100 MB/s de escritura secuencial</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Refrigeraciones") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://ar-hard.com.ar/wp-content/uploads/nh-d15-G2-chromax-black_4.jpg" class="card-img-top" alt="Refrigeración ">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrigeración Noctua NH-D15</h5>
+                        <p class="card-text">Diseñado para disipar más de 220W TDP</p>
+                        <p class="card-text">Incluye dos ventiladores NF-A15 PWM de 140 mm que operan entre 300 y 1.500 RPM</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://cdn.ibertronica.es/product/MICOPEERLESS-ASSA-SE_00001.jpeg" class="card-img-top" alt="Refrigeración ">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrigeración Thermalright Peerless Assassin 120 SE </h5>
+                        <p class="card-text">Maneja eficientemente cargas térmicas de más de 200W a 240W TDP</p>
+                        <p class="card-text">ventiladores TL-C12C de 120 mm alcanzan hasta 1.550 RPM con un flujo de aire de 66,17</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_789134-CBT109049766545_032026-O.webp" class="card-img-top" alt="Refrigeración">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrigeración Arctic Liquid Freezer III 240</h5>
+                        <p class="card-text">Radiador de 240 mm con un grosor optimizado de 38 mm</p>
+                        <p class="card-text">Incluye dos ventiladores P12 PWM de alta presión estática que funcionan entre 200 y 2.000 RPM</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://m.media-amazon.com/images/I/51QqqfdmCKL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Refrigeración ">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrigeración be quiet! Dark Rock TF 2</h5>
+                        <p class="card-text">Capaz de disipar hasta 230W</p>
+                        <p class="card-text">Equipa dos ventiladores Silent Wings de 135 mm con velocidad máxima de 1.400 RPM y un flujo continuo ultra silencioso</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Fuente de Alimentación") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfgAFuJ17gkcld0D6h5pcMjLTFG_BfF6PFHylbsSqvrg&s=10" class="card-img-top" alt="Fuente ">
+                    <div class="card-body">
+                        <h5 class="card-title">Fuente Corsair RM750e</h5>
+                        <p class="card-text">750W</p>
+                        <p class="card-text">Certificación 80 Plus Gold</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_743704-MLA107456814860_032026-O.webp" class="card-img-top" alt="Fuente ">
+                    <div class="card-body">
+                        <h5 class="card-title">Fuente be quiet! Pure Power 12 M 850W</h5>
+                        <p class="card-text">850W</p>
+                        <p class="card-text">Certificación 80 Plus Gold</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/006/269/290/products/fuente-pc-500w-80-plus-bronze-raptor-596c6c3003a6ee657217837576653647-480-0.webp" class="card-img-top" alt="Fuente 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Fuente Raptor Volt</h5>
+                        <p class="card-text">650W</p>
+                        <p class="card-text">Certificación 80 Plus Bronze</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://braincorp.com.ve/wp-content/uploads/2025/11/D_NQ_NP_2X_945268-MLV76955649068_062024-F.webp" class="card-img-top" alt="Fuente ">
+                    <div class="card-body">
+                        <h5 class="card-title">Fuente MSI MAG A550BN</h5>
+                        <p class="card-text">550W</p>
+                        <p class="card-text">Certificación 80 Plus Bronze</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    if (tipo == "Gabinete") {
+
+        html = `
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://www.venex.com.ar/products_images/1777475073_gabinete_sentey_h10_tg_black-3png" class="card-img-top" alt="Gabinete ">
+                    <div class="card-body">
+                        <h5 class="card-title">Gabinete Sentey H10 TG Vidrio Templado</h5>
+                        <p class="card-text">Compatibilidades Motherboards: Micro ATX y Mini ITX.  Placa de vídeo (GPU): Largo máximo de hasta 305 mm.  Disipador por aire de CPU: Altura máxima de hasta 160 mm.</p>
+                        <p class="card-text">Tipo: Mid Tower Dimensiones: 410 mm (alto) x 195 mm (ancho) x 310 mm (profundidad).  Peso: 3.1 kg neto.</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://www.venex.com.ar/products_images/1778009372_gabinete_solarmax_cm-b300_tg_blackjpg" class="card-img-top" alt="Gabinete ">
+                    <div class="card-body">
+                        <h5 class="card-title">Gabinete Solarmax Cm-B300 TG Vidrio Templado</h5>
+                        <p class="card-text">Compatibilidades Motherboards: Micro ATX y Mini ITX.  Placa de vídeo (GPU): Largo máximo de hasta 340 mm (sin ventiladores frontales) o 318 mm (con ventiladores instalados).  Disipador por aire de CPU: Altura máxima de hasta 157 mm.</p>
+                        <p class="card-text">Tipo: Cubo / Micro ATX.  Dimensiones: 350 mm (alto) x 275 mm (ancho) x 304 mm (profundidad).  Peso: 7,5 kg neto.</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="https://www.venex.com.ar/products_images/thumb/1780061685_diseno_sin_titulo_-_2026-05-29t103431620png" class="card-img-top" alt="Gabinete ">
+                    <div class="card-body">
+                        <h5 class="card-title">Gabinete Thermaltake View 270 Plus TG C/Coolers x3 ARGB Vidrio Templado Matcha Green</h5>
+                        <p class="card-text">Compatibilidades Motherboards: E-ATX, ATX, Micro ATX y Mini ITX.  Placa de vídeo (GPU): Largo máximo de hasta 420 mm.  Disipador por aire de CPU: Altura máxima de hasta 180 mm.</p>
+                        <p class="card-text">Tipo: Mid Tower.  Dimensiones: 456 mm (alto) x 230 mm (ancho) x 454 mm (profundidad).  Peso: 6.3 kg neto.</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100">
+                    <img src="URL-GABINETE-4" class="card-img-top" alt="Gabinete 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Gabinete 4</h5>
+                        <p class="card-text">Característica 1</p>
+                        <p class="card-text">Característica 2</p>
+                        <button class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+    }
+
+    document.getElementById("productos").innerHTML = html;
+    window.scrollTo(0, 0);
+}
+
+function mostrarComponentes() {
+    document.getElementById("componentes").scrollIntoView();
+}
+
+function inicio() {
+    document.getElementById("inicio").classList.remove("d-none");
+    document.getElementById("componentes").classList.remove("d-none");
+    document.getElementById("contacto").classList.remove("d-none");
+    document.getElementById("catalogo").classList.add("d-none");
+    window.scrollTo(0, 0);
+}
+
+</script>
+
+</body>
+</html>
