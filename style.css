@@ -1,3 +1,10 @@
+:root {
+    --color-background: #F8F9FA;
+    --color-text: #212529;
+    --color-primary: #2D6A4F;
+    --color-accent: #E76F51;
+}
+
 .card-img-top {
     width: 100%;
     height: 400px;
@@ -7,12 +14,12 @@
 }
 
 body {
-    background-color: #344361;
-    color: #c51111;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 .navbar {
-    background-color: #90abc5 !important;
+    background-color: var(--color-primary) !important;
 }
 
 .navbar .nav-link,
@@ -21,51 +28,57 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #000000 !important;
+    color: var(--color-accent) !important;
 }
 
 .hero {
-    background-color: #bb1313;
+    background-color: var(--color-primary);
 }
 
 .hero h1,
 .hero h6,
 .hero p {
-    color: #c51111;
+    color: #ffffff;
 }
 
 .card {
-    background-color: #2e315c !important;
-    color: #c51111;
+    background-color: #ffffff !important;
+    color: var(--color-text);
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 .card-title {
-    color: #0b1f33;
+    color: var(--color-primary);
 }
 
 .card-text {
-    color: #6b7280;
+    color: #495057;
 }
 
 form {
     background-color: #ffffff;
+    border-radius: 12px;
 }
 
 .form-label {
-    color: #0b1f33;
+    color: var(--color-text);
 }
 
-.btn-naranja {
-    background-color: #163a5f;
+.btn-naranja, .btn-agenda {
+    background-color: var(--color-accent);
     color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-naranja:hover {
-    background-color: #0b1f33;
+.btn-naranja:hover, .btn-agenda:hover {
+    background-color: #d95f40;
     color: #ffffff;
 }
 
 footer {
-    background-color: #0b1f33 !important;
+    background-color: var(--color-primary) !important;
     color: #ffffff;
 }
