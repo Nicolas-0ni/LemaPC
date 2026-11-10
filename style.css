@@ -5,17 +5,28 @@
     --color-accent: #E76F51;
 }
 
+/* Las imágenes se adaptan al ancho de la tarjeta y a la altura de la pantalla */
 .card-img-top {
     width: 100%;
-    height: 400px;
+    height: clamp(180px, 32vh, 400px);
     object-fit: contain;
     padding: 15px;
     background-color: white;
 }
 
+/* Imagen del inicio: fluida, nunca más ancha que su contenedor */
+.hero-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 body {
     background-color: var(--color-background);
     color: var(--color-text);
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -81,4 +92,48 @@ form {
 footer {
     background-color: var(--color-primary) !important;
     color: #ffffff;
+}
+/* ---------- Ajustes para celulares y tablets ---------- */
+@media (max-width: 767.98px) {
+    .hero h1,
+    .display-3 {
+        font-size: clamp(2rem, 11vw, 3.5rem);
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+        margin-right: 0.5rem !important;
+    }
+
+    .card-img-top {
+        height: clamp(160px, 30vh, 280px);
+        padding: 10px;
+    }
+
+    section {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Pantallas muy chicas: títulos y textos un poco más compactos */
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+}
+
+/* Pantallas grandes: las tarjetas aprovechan el ancho disponible */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
